@@ -1,0 +1,46 @@
+.container {
+  .no-data {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+
+    .row {
+      width: 200px;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+
+      .label, .value {
+        flex: 1;
+      }
+
+      .label {
+        font-weight: bold;
+      }
+
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr {
+          background-color: #ffffff;
+
+          &:nth-child(even)  {
+            background-color: #d3d3d3;
+          }
+        }
+      }
+    }
+  }
+}

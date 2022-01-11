@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="items" *ngIf="items">
+
+    <div class="row">
+      <div class="label">Id</div>
+      <div class="value">{{ items.id }}</div>
+    </div>
+
+    <div class="row">
+      <div class="label">Name</div>
+      <div class="value">{{ items.name }}</div>
+    </div>
+
+    <div class="row">
+      <table>
+        <tr>
+          <th>Key</th>
+          <th>Value</th>
+        </tr>
+        <tr *ngFor="let item of items.items">
+          <td>{{ item.key }}</td>
+          <td>{{ item.value }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div *ngIf="!items" class="no-data">No Data</div>
+</div>
